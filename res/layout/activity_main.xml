@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="protocounter.sbl.hanafudacounter.MainActivity"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sakura" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/buttonLayoutGlobal">
+
+        <LinearLayout
+            android:id="@+id/scoreLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Player 1"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/player1_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/playerSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+
+                android:allowUndo="true"
+                android:showText="true"
+                android:textOff="Player 1 "
+                android:textOn="Player 2 "
+
+                android:thumb="@color/colorPrimary"
+                android:thumbTint="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Player 2"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/player2_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/buttonLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ToggleButton
+                    android:id="@+id/goukou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Goukou"
+                    android:textOn="Goukou" />
+
+                <ToggleButton
+                    android:id="@+id/shikou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Shikou"
+                    android:textOn="Shikou" />
+
+                <ToggleButton
+                    android:id="@+id/ameShikou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Ame-Shikou"
+                    android:textOn="Ame-Shikou" />
+
+                <ToggleButton
+                    android:id="@+id/sankou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Sankou"
+                    android:textOn="Sankou" />
+
+                <ToggleButton
+                    android:id="@+id/inoshikachou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Inoshikachou"
+                    android:textOn="Inoshikachou" />
+
+                <ToggleButton
+                    android:id="@+id/akatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Akatan"
+                    android:textOn="Akatan" />
+
+                <ToggleButton
+                    android:id="@+id/aotan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Aotan"
+                    android:textOn="Aotan" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="Combinations with bonus points"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <ToggleButton
+                        android:id="@+id/tane"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOff="Tane"
+                        android:textOn="Tane" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="plusTane"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/taneBonusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="minusTane"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/tan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOff="Tan"
+                        android:textOn="Tan" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="plusTan"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/tanBonusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="minusTan"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/kasu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOff="Kasu"
+                        android:textOn="Kasu" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="plusKasu"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/kasuBonusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="minusKasu"
+                        android:text="-" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="Special Combinations"
+                    android:textColor="@android:color/black" />
+
+                <ToggleButton
+                    android:id="@+id/tsukimi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Tsukimi-Zake"
+                    android:textOn="Tsukimi-Zake" />
+
+                <ToggleButton
+                    android:id="@+id/hanami"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textOff="Hanami-Zake"
+                    android:textOn="Hanami-Zake" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/koiKoiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/buttonLayoutGlobal"
+android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        android:textOff="No KOI-KOI"
+        android:textOn="KOI-KOI" />
+
+
+    <Button
+        android:id="@+id/scoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="scorePoints"
+        android:layout_marginRight="8dp"
+
+        android:text="Score points" />
+
+    <Button
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_marginLeft="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonLayoutGlobal"
+android:layout_above="@+id/reset"
+        android:layout_toLeftOf="@id/scoreDisplay"
+        android:layout_toRightOf="@id/koiKoiButton"
+        android:onClick="totalButton"
+        android:text="Calculate" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:text="Reset"
+    android:layout_toLeftOf="@id/scoreButton"
+    android:layout_toRightOf="@id/koiKoiButton"
+    android:id="@+id/reset"
+    android:layout_marginLeft="8dp"
+    android:onClick="resetScores"/>
+
+    <TextView
+        android:id="@+id/scoreDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scoreButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
+
+</RelativeLayout>
